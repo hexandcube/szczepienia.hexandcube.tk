@@ -4,8 +4,9 @@
 <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <title>Raport szczepień COVID-19 w Polsce :: Hexandcube</title>
-    <link rel=stylesheet href="/assets/main.css" integrity defer>
+    <title>Raport szczepień COVID-19 w Polsce</title>
+    <link rel=stylesheet href="/assets/main.css">
+    <link rel=stylesheet href="/assets/main.css" media="print">
     <meta name=description content="Raporty szczepień przeciwko COVID-19 w Polsce">
     <meta property="og:title" content="Hexandcube.tk">
     <meta property="og:type" content="profile">
@@ -27,7 +28,7 @@
     <meta name=msapplication-TileColor content="#ff585d">
     <meta name=msapplication-config content="/icons/browserconfig.xml">
     <meta name=theme-color content="#ff585d">
-    <script src="https://kit.fontawesome.com/f6e2d80f62.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f6e2d80f62.js" media="print" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -314,7 +315,12 @@
                                     .severeNopsPercent;
                                 document.querySelector("#nopDeathsPercent").innerHTML = response.data[0]
                                     .nopDeathsPercent;
+
+                                document.title = `[${response.data[0]
+                                .lastVaccUpdate}] Raport szczepień COVID-19 w Polsce`
                             })
+
+                            
                     </script>
                 </div>
             </div>
